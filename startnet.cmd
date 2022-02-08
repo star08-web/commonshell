@@ -10,8 +10,8 @@ cls
 echo [debug] [session:1] [usr:nt_service\trustedinstaller]
 echo application list
 echo 1. diskpart                    2. windows command line (cmd.exe)
-echo 3. explorer++                  4. GimageX
-echo 5. browser                     6. Regedit
+echo 3."customapp1"                 4. "customapp2"
+echo 5. "customapp3"                6. Regedit
 choice /c 123456 /n /m "SELEZIONA DA ELENCO: "
 cls
 echo.
@@ -33,18 +33,18 @@ start
 goto start
 rem ###############################
 :3 
-echo starting explorer++
-start \windows\explorer++.exe
+echo starting yourapp
+start "path_here"
 goto start
 rem ###############################
 :4 
-echo starting gimagex
-start \appfolder\gimagex\deploy-tool.exe
+echo starting yourapp
+start "path_here"
 goto start
 rem ###############################
 :5
-echo starting browser
-start \appfolder\browser\mypal.exe
+echo starting yourapp
+start "path_here"
 goto start
 rem ###############################
 :6
