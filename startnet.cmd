@@ -3,15 +3,15 @@ echo [debug] startingWPE
 wpeinit
 title wpeshell31
 color 3
-echo premere un tasto per avviare la sessione
+echo press any key to access session
 pause >nul 
 cls
 :start
-echo [debug] [session:1] [usr:nt_service\trustedinstaller]
+echo [debug] [session:%sessionname%] [user:%computername%\%username%]
 echo application list
 echo 1. diskpart                    2. windows command line (cmd.exe)
-echo 3."customapp1"                 4. "customapp2"
-echo 5. "customapp3"                6. Regedit
+echo 3.  customapp1                 4. customapp2
+echo 5.  customapp3                 6. Regedit
 choice /c 123456 /n /m "SELEZIONA DA ELENCO: "
 cls
 echo.
@@ -34,17 +34,17 @@ goto start
 rem ###############################
 :3 
 echo starting yourapp
-start "path_here"
+start path_here
 goto start
 rem ###############################
 :4 
 echo starting yourapp
-start "path_here"
+start path_here
 goto start
 rem ###############################
 :5
 echo starting yourapp
-start "path_here"
+start path_here
 goto start
 rem ###############################
 :6
